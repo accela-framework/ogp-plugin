@@ -1,0 +1,20 @@
+{
+    "name": "accela-framework/ogp-plugin",
+    "description": "OGP (Open Graph Protocol) meta tags generator for Accela",
+    "keywords": ["Accela", "SPA", "php framework", "OGP", "Open Graph", "Twitter Card"],
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/accela-framework/ogp-plugin",
+    "authors": [
+        {
+            "name": "green spot",
+            "email": "in.green.spot@gmail.com"
+        }
+    ],
+    "require": {
+        "accela-framework/accela": "^0.5"
+    },
+    "autoload": {
+        "files": ["src/load.php"]
+    }
+}
