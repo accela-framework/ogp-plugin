@@ -19,10 +19,10 @@ $accela = new Accela([
   "url" => "https://example.com",
   "plugins" => [
     "ogp" => [
-      "site_name" => "My Website",
-      "default_image" => "/assets/images/ogp-default.png",
-      "twitter_card" => "summary_large_image",
-      "twitter_site" => "@myaccount",
+      "site-name" => "My Website",
+      "default-image" => "/assets/images/ogp-default.png",
+      "twitter-card" => "summary_large_image",
+      "twitter-site" => "@myaccount",
       "locale" => "ja_JP"
     ]
   ]
@@ -33,10 +33,10 @@ $accela = new Accela([
 
 | オプション | 説明 | デフォルト |
 |-----------|------|-----------|
-| `site_name` | サイト名（og:site_name） | - |
-| `default_image` | デフォルトOGP画像 | - |
-| `twitter_card` | Twitter Cardタイプ | `summary_large_image` |
-| `twitter_site` | Twitterアカウント | - |
+| `site-name` | サイト名（og:site_name） | - |
+| `default-image` | デフォルトOGP画像 | - |
+| `twitter-card` | Twitter Cardタイプ | `summary_large_image` |
+| `twitter-site` | Twitterアカウント | - |
 | `locale` | ロケール | `ja_JP` |
 
 ## 使い方
@@ -75,13 +75,13 @@ $accela = new Accela([
 
 ```php
 $accela->pageProps("/blog/[slug]/", function($query) use ($db) {
-    $post = $db->get($query["slug"]);
-    return [
-        "title" => $post->title,
-        "description" => $post->excerpt,
-        "ogpImage" => $post->thumbnail,
-        "url" => "/blog/" . $post->slug . "/"
-    ];
+  $post = $db->get($query["slug"]);
+  return [
+    "title" => $post->title,
+    "description" => $post->excerpt,
+    "ogpImage" => $post->thumbnail,
+    "url" => "/blog/" . $post->slug . "/"
+  ];
 });
 ```
 

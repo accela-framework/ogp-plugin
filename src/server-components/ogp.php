@@ -12,22 +12,22 @@
  *   - image: OGP画像URL
  *   - url: ページURL
  *   - type: og:type (default: "website")
- *   - site-name: サイト名（デフォルト設定を上書き）
- *   - twitter-card: summary / summary_large_image / player（デフォルト設定を上書き）
- *   - twitter-site: @username（デフォルト設定を上書き）
- *   - locale: ロケール（デフォルト設定を上書き）
+ *   - site-name: サイト名
+ *   - twitter-card: summary / summary_large_image / player
+ *   - twitter-site: @username
+ *   - locale: ロケール
  */
 
-$defaults = $accela->getData("ogp_defaults") ?? [];
+$defaults = $accela->getData("ogp-defaults") ?? [];
 
 $title = $props["title"] ?? "";
 $description = $props["description"] ?? "";
-$image = $props["image"] ?? $defaults["default_image"] ?? "";
+$image = $props["image"] ?? $defaults["default-image"] ?? "";
 $url = $props["url"] ?? "";
 $type = $props["type"] ?? "website";
-$siteName = $props["site-name"] ?? $defaults["site_name"] ?? "";
-$twitterCard = $props["twitter-card"] ?? $defaults["twitter_card"] ?? "summary_large_image";
-$twitterSite = $props["twitter-site"] ?? $defaults["twitter_site"] ?? "";
+$siteName = $props["site-name"] ?? $defaults["site-name"] ?? "";
+$twitterCard = $props["twitter-card"] ?? $defaults["twitter-card"] ?? "summary_large_image";
+$twitterSite = $props["twitter-site"] ?? $defaults["twitter-site"] ?? "";
 $locale = $props["locale"] ?? $defaults["locale"] ?? "ja_JP";
 
 // URLが相対パスの場合、絶対URLに変換
